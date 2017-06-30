@@ -50,6 +50,8 @@ module Martyr
           error_message = "#{typecast.class.name} typecast option not supported. Give a Symbol, String, Array or Proc"
           raise RuntimeError.new(error_message)
         end
+      rescue
+        nil
       end
 
       private
