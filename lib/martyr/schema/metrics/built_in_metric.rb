@@ -38,7 +38,7 @@ module Martyr
       end
 
       def extract(fact)
-        raw_fact_value = fact.raw.fetch(fact_alias.to_s)
+        raw_fact_value = fact.raw.fetch(fact_alias.to_s).to_s
         case typecast
         when NilClass
           raw_fact_value.to_i
